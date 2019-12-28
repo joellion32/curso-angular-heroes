@@ -1,0 +1,17 @@
+<h1>Buscar heroes con: <small>{{termino}}</small></h1>
+
+<div class="row">
+<div class="col-md-12">
+  <div *ngIf="heroes.length == 0" class="alert alert-danger animated fadeIn fast" role="alert">
+    No se pudo encontrar el heroe con la letra: {{termino}}
+ </div>
+</div>
+</div>
+
+<div class="card-columns">
+<!--contenedores de los heroes-->
+<app-card-heroe [heroe]="heroe" [index]="i"  *ngFor="let heroe of heroes; let i = index"></app-card-heroe>
+
+
+
+</div><!--cierre de la clase card-column-->
